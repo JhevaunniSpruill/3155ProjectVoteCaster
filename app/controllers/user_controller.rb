@@ -1,17 +1,22 @@
 class UserController < ApplicationController
+    def show
+        @user = User.find(params[:id])
+    end
+    
     def new
     end
     
     def create
-<<<<<<< HEAD
-    end
-=======
-        @user = User.new(params[:user])
+        @user = User.new(user_params)
         
         @user.save
         redirect_to @user
     end
-    
-  
->>>>>>> d748996ba4640c41bfac7cbbffdfca0db92855f3
+
 end
+
+private 
+def user_params
+    params.require(:user).permit(:username, :password)
+end
+    
