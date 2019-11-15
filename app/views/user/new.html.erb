@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<h1> New User</h1>
-<%= form_for :user, url: user_path do |f| %>
-  <p>
-    <%= f.label :Name %><br>
-    <%= f.text_field :Name %>
-  </p>
- 
-  <p>
-    <%= f.label :Username %><br>
-    <%= f.text_field :Username %>
-  </p>
-  
-  <p>
-    <%= f.label :Email %><br>
-    <%= f.text_field :Email %>
-  </p
-  
-  
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-=======
 <h1>New User</h1>
 
 <%= form_for :user, url: user_index_path do |f| %>
@@ -42,4 +17,5 @@
     </p>
    
   <% end %>
->>>>>>> d748996ba4640c41bfac7cbbffdfca0db92855f3
+  
+  <%= link_to 'Back to home page', home_index_url %>
