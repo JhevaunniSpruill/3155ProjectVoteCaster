@@ -1,1 +1,37 @@
 <h1>Create New Poll</h1>
+
+<%= form_for :polls, url: polls_path do |f| %>
+    <p>
+        <%= f.label "Enter_your_question_here" %><br>
+        <%= f.text_area :Poll_contents %>
+    </p>
+    
+    <h2>Enter your answer choices below: </h2>
+    
+    <p>
+        <%= f.label :Choice_1 %><br>
+        <%= f.text_area :Choice_1 %>
+    </p>
+    
+     <p>
+        <%= f.label :Choice_2 %><br>
+        <%= f.text_area :Choice_2 %>
+    </p>
+    
+     <p>
+        <%= f.label :Choice_3 %><br>
+        <%= f.text_area :Choice_3 %>
+    </p>
+    
+     <p>
+        <%= f.label :Choice_4 %><br>
+        <%= f.text_area :Choice_4 %>
+    </p>
+    
+    <p>
+        <%= f.submit "Create Poll"%>
+    </p>
+    
+    
+    
+    <% end %>
