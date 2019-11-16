@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_183054) do
+ActiveRecord::Schema.define(version: 2019_11_16_043128) do
+
+  create_table "polls", force: :cascade do |t|
+    t.text "Poll_contents"
+    t.text "Choice_1"
+    t.text "Choice_2"
+    t.text "Choice_3"
+    t.text "Choice_4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
