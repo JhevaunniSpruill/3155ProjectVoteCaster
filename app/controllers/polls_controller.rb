@@ -8,13 +8,17 @@ class PollsController < ApplicationController
     end
     
     def new
+        @polls = Poll.new
     end
     
     def create
         @polls = Poll.new(polls_params)
         
-        @polls.save
-        redirect_to @polls
+        if @polls.save
+            redirect_to @polls
+        else
+            render 'new'
+        end
     end
 end
 
