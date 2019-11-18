@@ -20,6 +20,27 @@ class PollsController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit
+        @polls = Poll.find(params[:id])
+    end
+    
+    def update
+        @polls = Poll.find(params[:id])
+        
+        if @polls.update(polls_params)
+            redirect_to @polls
+        else
+            render 'edit'
+        end
+    end
+    
+    def destroy
+        @polls = Poll.find(params[:id])
+        @polls.destroy
+        
+        redirect_to @polls
+    end
 end
 
 private

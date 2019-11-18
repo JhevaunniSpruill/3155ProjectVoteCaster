@@ -9,7 +9,12 @@
     <% @polls.each do |polls| %>
     <tr>
         <td><%=polls.Poll_contents %></td>
-        <td><%= link_to 'Show', polls_path(polls) %></td>
+        <td><%= link_to 'Show', poll_path(polls) %></td>
+        <td><%= link_to 'Edit Poll', edit_poll_path(polls) %></td>
+        <td><%= link_to 'Delete Poll',
+                                    poll_path(polls),
+                                    method: :delete,
+                                    data: {confirm: 'Are you sure?'}%></td>
     </tr>
     
     <%end%>
