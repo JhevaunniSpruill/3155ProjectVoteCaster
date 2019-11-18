@@ -5,6 +5,19 @@
 h2{
     
     color: yellow;
-    
-    
+}
+
+tr{
+    color: white;
+    font-size: 18px;
+}
+
+input[type = button], input[type = submit]{
+    background-color: #4CAF50;
+    float: none;
+    border: none;
+    color: white;
+    padding: 16px 20px;
+    text-decoration: none;
+    cursor: pointer;
 }
