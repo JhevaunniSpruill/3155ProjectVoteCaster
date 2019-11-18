@@ -1,14 +1,10 @@
+<h2>User Successfully Created</h2>
+
+<br>
+
 <p>
     <strong>Username:</strong>
     <%= @user.username %>
 </p>
 
-<p>
-    <strong>Number of Polls created: </strong>
-    <!--poll number reference here-->
-</p>
-
-<p>
-    <strong>Number of voted polls</strong>
-    <!-- voted poll numbers reference here-->
-</p>
+<%= link_to 'Back to home page', home_index_url %>
