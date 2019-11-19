@@ -2,6 +2,20 @@
 
 <%= form_for :user, url: user_index_path do |f| %>
 
+<% if @user.errors.any? %>
+    <div id = "error_explanation">
+        <h2>
+            <%= pluralize(@user.errors.count, "error") %> prohibited this
+            user from being created:
+        </h2>
+        <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
     <p>
         <%= f.label :username %><br>
         <%= f.text_field :username %>
@@ -17,3 +31,10 @@
     </p>
    
   <% end %>
+<<<<<<< HEAD
+=======
+  
+  <p1>
+  <%= link_to 'Back to home page', home_index_url %>
+  </p1>
+>>>>>>> 55cab239dcb458bf75cb4bd3de9e5eec6fa4496c

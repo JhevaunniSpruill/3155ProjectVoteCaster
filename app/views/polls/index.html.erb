@@ -1,0 +1,35 @@
+<h1>Poll Listing</h1>
+<button class="button button4"><%= link_to 'Create New Poll', new_poll_url %></button>
+        <br>
+        <br>
+
+<style>
+.button {
+  background-color: lightgreen; 
+  border: none;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.button4 {border-radius: 12px;}
+</style>
+
+<table>
+    
+    <% @polls.each do |polls| %>
+    <tr>
+        <td><%=polls.Poll_contents %></td>
+        <td><button class="button button4"><%= link_to 'Show', poll_path(polls) %></button></td>
+        <td><button class="button button4"><%= link_to 'Edit Poll', edit_poll_path(polls) %></button></td>
+        <td><button class="button button4"><%= link_to 'Delete Poll',
+                                    poll_path(polls),
+                                    method: :delete,
+                                    data: {confirm: 'Are you sure?'}%></button></td>
+    </tr>
+    
+    <%end%>
+    
+</table>
