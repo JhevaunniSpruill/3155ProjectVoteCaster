@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>CastAway</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<!DOCTYPE html>
+
 
 <body>
 
@@ -15,13 +8,23 @@
     <div id="main-container" class="container">
       <div class="row">
         <div class="col-xs-3">
-          <h3>CastAway</h3>
-        </div>
-        <div class="col-xs-9">
-          <%= yield %>
-        </div>
+      </div>
+        
       </div>
     </div>
 
   </body>
 </html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap core CSS -->
+<!-- Custom fonts for this template -->
+<!-- Custom styles for this template -->
+<!-- Navigation -->
+<%= yield %>
+<!-- Footer -->
+<!-- Bootstrap core JavaScript -->
+<!-- Plugin JavaScript -->
+<!-- Custom scripts for this template -->
