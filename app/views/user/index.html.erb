@@ -1,10 +1,26 @@
 <h1>User Page</h1>
+<style>
+.button {
+  background-color: yellow; 
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 2px;
+  cursor: pointer;
+}
 
-<%= link_to "Join a poll" %>
+.button4 {border-radius: 12px;}
+</style>
+<tr>
+<button class="button button4"><%= link_to "Join a poll" %></button>
 <br>
-<%= link_to "Create poll", new_poll_url %>
+<button class="button button4"><%= link_to "Create poll", new_poll_url %></button>
 <br>
-<%= link_to "View Created Polls", polls_path %>
+<button class="button button4"><%= link_to "View Created Polls", polls_path %></button>
 <br><br><br>
 
 

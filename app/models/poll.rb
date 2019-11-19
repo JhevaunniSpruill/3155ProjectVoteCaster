@@ -3,5 +3,8 @@ class Poll < ApplicationRecord
     validates :Choice_1, presence: true
     validates :Choice_2, presence: true
     
+    
+    
+    
 end
 

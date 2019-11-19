@@ -1,4 +1,8 @@
 class User < ApplicationRecord
     validates :username, presence: true, length: {minimum: 5}
     validates :password, presence: true, length: {minimum: 8}
-end
+    
+    has_many :poll, dependent: :destroy
+    
+end 
+    
