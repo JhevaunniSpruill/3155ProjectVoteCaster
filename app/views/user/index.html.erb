@@ -1,0 +1,19 @@
+<h1>User Page</h1>
+
+<%= link_to "Join a poll" %>
+<br>
+<%= link_to "Create poll", new_poll_url %>
+<br>
+<%= link_to "View Created Polls", polls_path %>
+<br><br><br>
+
+
+<tr>
+    <td>Username: </td>
+    <br>
+    <td>Polls Created: </td>
+    <br>
+    <td>Polls Voted: </td>
+    <br>
+    <td><%= link_to 'Update user info', edit_user_path(user_index_path) %></td>
+</tr>
