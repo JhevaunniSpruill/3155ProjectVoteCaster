@@ -12,5 +12,13 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require jquery.min
+//= require bootstrap.bundle.min
+//= require jquery.easing.min
+//= requiregrayscale.min
+//=require jquery3
+//=require jquery_ujs
 //= require turbolinks
+//=require bootstrap-sprockets
 //= require_tree .
+

@@ -1,2 +1,29 @@
-<h1>Welcome to CAST AWAY!</h1>
 
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to 'Log Out', logout_path %>
+<% else %>
+  <%= link_to 'Sign Up', signup_path %> or 
+<% end %>
+
+<p id=”notice”><%= notice %></p>
+
+</style>
+ 
+    
+ <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">CastAway</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Free Polling App!</h2>
+           
+    <button class="button button4"><%= link_to 'Log in', login_path %></button>
+    <br>
+    <br>
+    <button class="button button4"><%= link_to 'Create User', new_user_path %></button>
+    <br>
+    <br>
+    <button class="button button4"><%= link_to 'How To' %></button>
+    
+  
